@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import LogoAnimado from "./LogoAnimado";
@@ -13,7 +13,7 @@ type Phase = "black" | "drawing" | "fadingOut" | "done";
 type WipingLevel = "initial" | "step0" | "step1";
 
 const WIPE_DUR = 1.3;
-const WIPE_EASE = [0.85, 0, 0.15, 1];
+const WIPE_EASE: [number, number, number, number] = [0.85, 0, 0.15, 1];
 
 export default function Hero() {
   const { t, lang } = useLanguage();

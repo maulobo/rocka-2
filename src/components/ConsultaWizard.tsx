@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
   type WizardData,
@@ -538,7 +538,7 @@ function renderStep(
   stepIndex: number,
   data: WizardData,
   set: SetFn
-): JSX.Element {
+): ReactElement {
   if (stepIndex === 0) return <StepTipoEquipo data={data} set={set} />;
   if (stepIndex === 1) return <StepDatos data={data} set={set} />;
   if (stepIndex === 2) {
