@@ -1,0 +1,168 @@
+<h2>Diseño del Wizard — /consulta</h2>
+<p class="subtitle">Layout sidebar B + flujo por tipo de equipo. Así se ve cada pantalla clave.</p>
+
+<div class="section">
+  <span class="label">PASO 0 — Selector de equipo (siempre primero)</span>
+
+  <div class="mockup" style="max-width:720px;">
+    <div class="mockup-header">http://rolcka.com/consulta</div>
+    <div class="mockup-body" style="background:#0E1016;padding:0;display:grid;grid-template-columns:180px 1fr;min-height:380px;font-family:sans-serif;">
+      <!-- Sidebar -->
+      <div style="background:#090B0F;border-right:1px solid #1C2028;padding:28px 20px;">
+        <div style="font-size:8px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:20px;">SOLICITUD</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#9D031A;color:#fff;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+            <span style="font-size:9px;color:#E8ECF0;font-weight:700;text-transform:uppercase;">Tipo de equipo</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;opacity:0.3;">
+            <div style="width:22px;height:22px;background:#1C2028;color:#555;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Tus datos</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;opacity:0.3;">
+            <div style="width:22px;height:22px;background:#1C2028;color:#555;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Especificaciones</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;opacity:0.3;">
+            <div style="width:22px;height:22px;background:#1C2028;color:#555;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Configuración</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;opacity:0.3;">
+            <div style="width:22px;height:22px;background:#1C2028;color:#555;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Detalles finales</span>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding-top:40px;">
+          <div style="height:2px;background:#1C2028;margin-bottom:8px;"><div style="width:20%;height:100%;background:#9D031A;"></div></div>
+          <div style="font-size:8px;color:#555;font-weight:700;">PASO 1 DE 5</div>
+        </div>
+      </div>
+      <!-- Content -->
+      <div style="padding:28px 32px;">
+        <div style="font-size:8px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:6px;">TIPO DE EQUIPO</div>
+        <div style="font-size:18px;color:#E8ECF0;font-weight:900;text-transform:uppercase;margin-bottom:6px;">¿Qué necesitás?</div>
+        <div style="font-size:10px;color:#8A95A5;margin-bottom:24px;">Seleccioná el tipo de equipo para armar tu solicitud.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:24px;">
+          <div style="border:1px solid #9D031A;background:#0A0D12;padding:16px 12px;text-align:center;cursor:pointer;">
+            <div style="font-size:20px;margin-bottom:8px;">🏊</div>
+            <div style="font-size:10px;color:#E8ECF0;font-weight:900;text-transform:uppercase;">Piletas</div>
+            <div style="font-size:8px;color:#9D031A;margin-top:2px;">SELECCIONADO</div>
+          </div>
+          <div style="border:1px solid #1C2028;background:#0A0D12;padding:16px 12px;text-align:center;cursor:pointer;opacity:0.6;">
+            <div style="font-size:20px;margin-bottom:8px;">⚙️</div>
+            <div style="font-size:10px;color:#8A95A5;font-weight:900;text-transform:uppercase;">Bombas</div>
+            <div style="font-size:8px;color:#555;margin-top:2px;">CENTRÍFUGAS</div>
+          </div>
+          <div style="border:1px solid #1C2028;background:#0A0D12;padding:16px 12px;text-align:center;cursor:pointer;opacity:0.6;">
+            <div style="font-size:20px;margin-bottom:8px;">🚛</div>
+            <div style="font-size:10px;color:#8A95A5;font-weight:900;text-transform:uppercase;">Cisternas</div>
+            <div style="font-size:8px;color:#555;margin-top:2px;">AGUA / GASOIL</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <div style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">¿Alquiler o compra?</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px;margin-bottom:24px;">
+          <div style="border:1px solid #9D031A;background:#0A0D12;padding:6px 14px;"><span style="font-size:9px;color:#9D031A;font-weight:900;text-transform:uppercase;">✓ Alquiler</span></div>
+          <div style="border:1px solid #1C2028;background:#0A0D12;padding:6px 14px;"><span style="font-size:9px;color:#555;font-weight:900;text-transform:uppercase;">Compra</span></div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;">
+          <div style="background:#9D031A;color:#fff;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;padding:10px 20px;">SIGUIENTE →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="label">PASO FINAL — Resumen + envío por WhatsApp</span>
+
+  <div class="mockup" style="max-width:720px;">
+    <div class="mockup-header">Paso 5 de 5 — Confirmar y enviar</div>
+    <div class="mockup-body" style="background:#0E1016;padding:0;display:grid;grid-template-columns:180px 1fr;min-height:300px;font-family:sans-serif;">
+      <!-- Sidebar todo completo -->
+      <div style="background:#090B0F;border-right:1px solid #1C2028;padding:28px 20px;">
+        <div style="font-size:8px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:20px;">SOLICITUD</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#0F215A;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✓</div>
+            <span style="font-size:9px;color:#8A95A5;font-weight:700;text-transform:uppercase;">Tipo de equipo</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#0F215A;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✓</div>
+            <span style="font-size:9px;color:#8A95A5;font-weight:700;text-transform:uppercase;">Tus datos</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#0F215A;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✓</div>
+            <span style="font-size:9px;color:#8A95A5;font-weight:700;text-transform:uppercase;">Especificaciones</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#0F215A;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✓</div>
+            <span style="font-size:9px;color:#8A95A5;font-weight:700;text-transform:uppercase;">Configuración</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:22px;height:22px;background:#9D031A;color:#fff;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+            <span style="font-size:9px;color:#E8ECF0;font-weight:700;text-transform:uppercase;">Detalles finales</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div style="height:2px;background:#1C2028;margin-bottom:8px;"><div style="width:100%;height:100%;background:#9D031A;"></div></div>
+          <div style="font-size:8px;color:#9D031A;font-weight:700;">PASO 5 DE 5</div>
+        </div>
+      </div>
+      <!-- Preview WhatsApp -->
+      <div style="padding:28px 32px;">
+        <div style="font-size:8px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:6px;">RESUMEN</div>
+        <div style="font-size:14px;color:#E8ECF0;font-weight:900;text-transform:uppercase;margin-bottom:16px;">Revisá tu solicitud</div>
+        <div style="background:#090B0F;border:1px solid #1C2028;padding:14px;font-size:9px;color:#8A95A5;line-height:1.8;margin-bottom:16px;font-family:monospace;">
+          <div style="color:#9D031A;font-weight:900;margin-bottom:6px;">📋 SOLICITUD ROLCKA SRL</div>
+          <div>🏭 <strong style="color:#E8ECF0;">Empresa:</strong> Petrolera XYZ S.A.</div>
+          <div>👤 <strong style="color:#E8ECF0;">Contacto:</strong> Juan García</div>
+          <div>📅 <strong style="color:#E8ECF0;">Fecha:</strong> 10/03/2026</div>
+          <div style="margin-top:6px;color:#0F215A;">— — — — — — — — — —</div>
+          <div>⚙️ <strong style="color:#E8ECF0;">Equipo:</strong> Pileta de Acumulación (Alquiler)</div>
+          <div>🔢 <strong style="color:#E8ECF0;">Cantidad:</strong> 2 unidades</div>
+          <div>📦 <strong style="color:#E8ECF0;">Capacidad:</strong> 60 m³</div>
+          <div>📐 <strong style="color:#E8ECF0;">Espesor:</strong> 1/4"</div>
+          <div>🔩 <strong style="color:#E8ECF0;">Entradas:</strong> 4" × 2</div>
+          <div>🚛 <strong style="color:#E8ECF0;">Transporte:</strong> Sí</div>
+        </div>
+        <div style="background:#25D366;color:#fff;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;padding:12px 20px;text-align:center;cursor:pointer;">
+          📱 ENVIAR POR WHATSAPP
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="label">FLUJO DE PASOS POR TIPO</span>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:12px;">
+    <div style="background:#090B0F;border:1px solid #1C2028;padding:16px;border-top:2px solid #9D031A;">
+      <div style="font-size:9px;color:#9D031A;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">PILETAS (5 pasos)</div>
+      <div style="font-size:9px;color:#8A95A5;line-height:2;">
+        <div>1 · Tipo de equipo + servicio</div>
+        <div>2 · Empresa + contacto + fecha</div>
+        <div>3 · Tipo + cantidad + capacidad</div>
+        <div>4 · Entradas / salidas / chapas</div>
+        <div>5 · Escalera / techo / válvulas / accesorios / transporte</div>
+      </div>
+    </div>
+    <div style="background:#090B0F;border:1px solid #1C2028;padding:16px;border-top:2px solid #0F215A;">
+      <div style="font-size:9px;color:#0F215A;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">BOMBAS (3 pasos)</div>
+      <div style="font-size:9px;color:#8A95A5;line-height:2;">
+        <div>1 · Tipo de equipo + servicio</div>
+        <div>2 · Empresa + contacto + cantidad</div>
+        <div>3 · Fluido / HP / entrada / salida / extras</div>
+      </div>
+    </div>
+    <div style="background:#090B0F;border:1px solid #1C2028;padding:16px;border-top:2px solid #9D031A;">
+      <div style="font-size:9px;color:#9D031A;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;">CISTERNAS (3 pasos)</div>
+      <div style="font-size:9px;color:#8A95A5;line-height:2;">
+        <div>1 · Tipo de equipo + servicio</div>
+        <div>2 · Empresa + contacto</div>
+        <div>3 · Fluido / capacidad / motor / extras</div>
+      </div>
+    </div>
+  </div>
+</div>

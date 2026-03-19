@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build:*)",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm tsc:*)",
+      "Bash(pnpm vite:*)",
+      "Read(//Users/maurolobo/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.0/lib/brainstorm-server/**)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

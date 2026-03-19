@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #0e1016;
+  --color-bg-mid: #1c2028;
+  --color-border: #1c2028;
+  --color-border-mid: #252b35;
+  --color-red: #9d031a;
+  --color-red-light: #b3041f;
+  --color-blue: #0f215a;
+  --color-blue-deep: #0f3460;
+  --color-graphite: #1c2028;
+  --color-off-white: #e8ecf0;
+  --font-display: "Montserrat", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  /* Custom title scale */
+  --title-size-6xl: 2.25rem;
+  --title-size-7xl: 3.25rem;
+  --title-size-8xl: 4.25rem;
+}
+
+@layer utilities {
+  .title-primary {
+    @apply uppercase font-black tracking-tighter;
+    font-size: var(--title-size-6xl);
+    line-height: 0.95;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-primary {
+    font-size: var(--title-size-7xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-primary {
+    font-size: var(--title-size-8xl);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #1c1f27;
+  color: #e8ecf0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* === TYPOGRAPHY SYSTEM === */
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* === SMOOTH TRANSITIONS === */
+a,
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === SELECTION === */
+::selection {
+  background-color: #9d031a;
+  color: #0e1016;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1016;
+}
+::-webkit-scrollbar-thumb {
+  background: #9d031a;
+  border-radius: 0;
+}
+
+/* === NOISE TEXTURE OVERLAY === */
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* === HAZARD STRIPE MIXIN === */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #9d031a,
+    #9d031a 8px,
+    #0e1016 8px,
+    #0e1016 16px
+  );
+}
+
+.hazard-stripe-thin {
+  background: repeating-linear-gradient(
+    -45deg,
+    #9d031a,
+    #9d031a 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+/* === INDUSTRIAL GRID BACKGROUND — blue tint === */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Light grid for white/light sections */
+.grid-bg-light {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Small squares + corner dots — for dark sections, engineering/industrial feel */
+.pattern-squares {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Crect x='9' y='9' width='10' height='10' fill='rgba(37,99,235,0.03)' stroke='rgba(37,99,235,0.09)' stroke-width='0.6'/%3E%3Ccircle cx='0' cy='0' r='1.2' fill='rgba(37,99,235,0.12)'/%3E%3Ccircle cx='28' cy='0' r='1.2' fill='rgba(37,99,235,0.12)'/%3E%3Ccircle cx='0' cy='28' r='1.2' fill='rgba(37,99,235,0.12)'/%3E%3Ccircle cx='28' cy='28' r='1.2' fill='rgba(37,99,235,0.12)'/%3E%3C/svg%3E");
+  background-size: 28px 28px;
+  background-repeat: repeat;
+}
+
+/* Topographic contour lines — for light sections, geological/industrial feel */
+.pattern-topo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='240'%3E%3Cpath d='M0,30 C150,8 450,52 600,30' fill='none' stroke='rgba(14,16,22,0.16)' stroke-width='1.2'/%3E%3Cpath d='M0,60 C200,52 400,68 600,60' fill='none' stroke='rgba(14,16,22,0.08)' stroke-width='0.9'/%3E%3Cpath d='M0,90 C100,65 500,115 600,90' fill='none' stroke='rgba(14,16,22,0.16)' stroke-width='1.2'/%3E%3Cpath d='M0,120 C180,114 420,126 600,120' fill='none' stroke='rgba(14,16,22,0.08)' stroke-width='0.9'/%3E%3Cpath d='M0,150 C220,128 380,172 600,150' fill='none' stroke='rgba(14,16,22,0.16)' stroke-width='1.2'/%3E%3Cpath d='M0,180 C160,174 440,186 600,180' fill='none' stroke='rgba(14,16,22,0.08)' stroke-width='0.9'/%3E%3Cpath d='M0,210 C130,188 470,232 600,210' fill='none' stroke='rgba(14,16,22,0.16)' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-size: 600px 240px;
+  background-repeat: repeat;
+}
+
+/* === SECTION LABEL STYLE === */
+.section-label {
+  @apply font-bold uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #9d031a;
+}
+
+/* === CARD HOVER LIFT === */
+.card-lift {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* === GLOW LINE — red/blue gradient === */
+.glow-line {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #9d031a,
+    #0f215a,
+    transparent
+  );
+  opacity: 0.5;
+}
+
+/* === GLOW LINE BLUE === */
+.glow-line-blue {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0f215a, transparent);
+  opacity: 0.5;
+}
+
+/* === DEEP BLUE SECTION === */
+.section-deep-blue {
+  background: linear-gradient(135deg, #0f3460 0%, #0a1f42 100%);
+}
+
+/* === BLUE ACCENT BORDER === */
+.border-accent-blue {
+  border-color: #0f215a;
+}
+
+/* === PULSE GLOW BLUE === */
+@keyframes pulseGlowBlue {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(37, 99, 235, 0.2);
+  }
+}
+
+.pulse-glow-blue {
+  animation: pulseGlowBlue 3s ease-in-out infinite;
+}
+
+/* === ANIMATE FADE IN === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* === PULSE GLOW === */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 34, 34, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 2px rgba(204, 34, 34, 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}

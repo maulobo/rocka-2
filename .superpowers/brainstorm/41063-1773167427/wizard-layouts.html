@@ -1,0 +1,138 @@
+<h2>¿Qué estilo de wizard querés para el formulario de Fabricación?</h2>
+<p class="subtitle">El formulario va a guiar al cliente para que cuente qué necesita fabricar — elegí el layout que mejor encaja con el estilo de Rolcka.</p>
+
+<div class="cards">
+
+  <!-- OPTION A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0E1016;padding:20px;font-family:sans-serif;min-height:260px;">
+      <!-- Step indicator top -->
+      <div style="display:flex;gap:8px;margin-bottom:18px;align-items:center;">
+        <div style="width:28px;height:28px;background:#9D031A;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;">1</div>
+        <div style="flex:1;height:2px;background:#1C2028;position:relative;"><div style="width:0%;height:100%;background:#9D031A;"></div></div>
+        <div style="width:28px;height:28px;background:#1C2028;color:#555;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="flex:1;height:2px;background:#1C2028;"></div>
+        <div style="width:28px;height:28px;background:#1C2028;color:#555;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;">3</div>
+      </div>
+      <!-- Step label -->
+      <div style="font-size:9px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:6px;">PASO 01 / 03</div>
+      <div style="font-size:16px;color:#E8ECF0;font-weight:900;text-transform:uppercase;margin-bottom:16px;">¿Qué necesitás fabricar?</div>
+      <!-- Cards grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div style="border:1px solid #9D031A;background:#0A0D12;padding:10px;">
+          <div style="font-size:8px;color:#9D031A;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;">✓</div>
+          <div style="font-size:10px;color:#E8ECF0;font-weight:700;text-transform:uppercase;margin-top:4px;">Piletas</div>
+        </div>
+        <div style="border:1px solid #1C2028;background:#0A0D12;padding:10px;">
+          <div style="font-size:8px;color:#555;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;">○</div>
+          <div style="font-size:10px;color:#8A95A5;font-weight:700;text-transform:uppercase;margin-top:4px;">Cisternas</div>
+        </div>
+        <div style="border:1px solid #1C2028;background:#0A0D12;padding:10px;">
+          <div style="font-size:8px;color:#555;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;">○</div>
+          <div style="font-size:10px;color:#8A95A5;font-weight:700;text-transform:uppercase;margin-top:4px;">Estructuras</div>
+        </div>
+        <div style="border:1px solid #1C2028;background:#0A0D12;padding:10px;">
+          <div style="font-size:8px;color:#555;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;">○</div>
+          <div style="font-size:10px;color:#8A95A5;font-weight:700;text-transform:uppercase;margin-top:4px;">Spool / Piping</div>
+        </div>
+      </div>
+      <!-- Nav -->
+      <div style="display:flex;justify-content:flex-end;margin-top:14px;">
+        <div style="background:#9D031A;color:#fff;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;padding:8px 16px;">SIGUIENTE →</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Pasos lineales con número</h3>
+      <p>Barra de progreso arriba, el usuario avanza paso a paso. Selección mediante cards tipo grilla. Simple y directo.</p>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0E1016;padding:20px;font-family:sans-serif;min-height:260px;display:grid;grid-template-columns:100px 1fr;gap:0;">
+      <!-- Left sidebar steps -->
+      <div style="border-right:1px solid #1C2028;padding-right:16px;">
+        <div style="font-size:7px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:12px;">PASOS</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:6px;height:6px;background:#9D031A;flex-shrink:0;"></div>
+            <span style="font-size:8px;color:#E8ECF0;font-weight:700;text-transform:uppercase;">Tipo</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:6px;height:6px;background:#1C2028;flex-shrink:0;"></div>
+            <span style="font-size:8px;color:#555;font-weight:700;text-transform:uppercase;">Detalles</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:6px;height:6px;background:#1C2028;flex-shrink:0;"></div>
+            <span style="font-size:8px;color:#555;font-weight:700;text-transform:uppercase;">Contacto</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right content -->
+      <div style="padding-left:16px;">
+        <div style="font-size:9px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:6px;">TIPO DE TRABAJO</div>
+        <div style="font-size:14px;color:#E8ECF0;font-weight:900;text-transform:uppercase;margin-bottom:14px;">¿Qué necesitás fabricar?</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="border:1px solid #9D031A;background:#0A0D12;padding:8px 10px;display:flex;align-items:center;gap:8px;">
+            <div style="width:4px;height:4px;background:#9D031A;flex-shrink:0;"></div>
+            <span style="font-size:9px;color:#E8ECF0;font-weight:700;text-transform:uppercase;">Piletas de almacenamiento</span>
+          </div>
+          <div style="border:1px solid #1C2028;background:#0A0D12;padding:8px 10px;display:flex;align-items:center;gap:8px;">
+            <div style="width:4px;height:4px;background:#1C2028;flex-shrink:0;"></div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Cisternas / Tanques</span>
+          </div>
+          <div style="border:1px solid #1C2028;background:#0A0D12;padding:8px 10px;display:flex;align-items:center;gap:8px;">
+            <div style="width:4px;height:4px;background:#1C2028;flex-shrink:0;"></div>
+            <span style="font-size:9px;color:#555;font-weight:700;text-transform:uppercase;">Estructuras y Plataformas</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-top:12px;">
+          <div style="background:#9D031A;color:#fff;font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:0.15em;padding:7px 14px;">SIGUIENTE →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Sidebar de pasos + contenido</h3>
+      <p>Menú lateral izquierdo con los pasos siempre visibles. Da sensación de control y contexto. Más sofisticado.</p>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0E1016;padding:20px;font-family:sans-serif;min-height:260px;">
+      <!-- Preguntas tipo conversacional -->
+      <div style="font-size:9px;color:#9D031A;letter-spacing:0.2em;font-weight:900;text-transform:uppercase;margin-bottom:8px;">CONSULTA RÁPIDA</div>
+      <!-- Q1 answered -->
+      <div style="margin-bottom:14px;opacity:0.5;">
+        <div style="font-size:10px;color:#8A95A5;font-weight:700;text-transform:uppercase;margin-bottom:4px;">¿Qué necesitás fabricar?</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="border:1px solid #9D031A;background:#0A0D12;color:#9D031A;font-size:8px;font-weight:900;text-transform:uppercase;padding:3px 8px;">✓ Piletas</span>
+        </div>
+      </div>
+      <!-- Q2 active -->
+      <div style="margin-bottom:14px;border-left:2px solid #9D031A;padding-left:12px;">
+        <div style="font-size:10px;color:#E8ECF0;font-weight:700;text-transform:uppercase;margin-bottom:6px;">¿Cuántas unidades aproximadamente?</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="border:1px solid #1C2028;background:#0A0D12;color:#555;font-size:8px;font-weight:900;text-transform:uppercase;padding:3px 8px;">1–2</span>
+          <span style="border:1px solid #1C2028;background:#0A0D12;color:#555;font-size:8px;font-weight:900;text-transform:uppercase;padding:3px 8px;">3–5</span>
+          <span style="border:1px solid #1C2028;background:#0A0D12;color:#555;font-size:8px;font-weight:900;text-transform:uppercase;padding:3px 8px;">+5</span>
+        </div>
+      </div>
+      <!-- Q3 locked -->
+      <div style="opacity:0.2;">
+        <div style="font-size:10px;color:#8A95A5;font-weight:700;text-transform:uppercase;margin-bottom:4px;">¿Cuándo lo necesitás?</div>
+        <div style="font-size:8px;color:#555;">— bloqueado hasta completar anterior</div>
+      </div>
+      <!-- Progress -->
+      <div style="margin-top:14px;display:flex;align-items:center;gap:8px;">
+        <div style="flex:1;height:2px;background:#1C2028;"><div style="width:40%;height:100%;background:#9D031A;"></div></div>
+        <span style="font-size:8px;color:#555;font-weight:700;">2 / 5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Conversacional / escalonado</h3>
+      <p>Preguntas que se van desbloqueando una a una, tipo encuesta progresiva. Rápido de completar, muy amigable.</p>
+    </div>
+  </div>
+
+</div>
